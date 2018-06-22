@@ -31,7 +31,7 @@ describe('GET /profile', function() {
       if (error) {
         done(error);
       } else {
-        agent.saveCookies(res);
+        agent._saveCookies(res);
 
         agent.get('/profile')
         .expect(200, done);
